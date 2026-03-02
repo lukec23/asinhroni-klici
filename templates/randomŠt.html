@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Random qutoe</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-
 <body>
-    <h1>Random quote: </h1>
-    <div id="quote"> Pritisni gumb za random quote </div>
+    <h1>Random št: </h1>
+    <div id="št"> Pritisni gumb za random quote </div>
 
-    <button onclick="btnCLICK()" type="button">QUOTE!</button>
+    <button onclick="btnCLICK()" type="button">ŠT!</button>
 
 </body>
-
 </html>
 <script>
     function btnCLICK() {
-        var divQuote = document.getElementById("quote")
+        var divŠT = document.getElementById("št")
         
         $.ajax({
-            url: "/quoteData",
+            url: "/randomŠtData",
             data: {
 
             },

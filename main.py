@@ -20,11 +20,11 @@ def coinData():
     return {"status" : status, "slika": imgSource[status]}
 
 @app.route("/quote")
-def coinflip():
+def quote():
     return render_template("quote.html")
 
-@app.route("/quote")
-def coinData():
+@app.route("/quoteData")
+def quoteData():
     quotes=["Biti drugačen ni napaka, ampak moč.",
             "Sreča ni nekaj, kar je pripravljeno. Sreča prihaja iz vaših dejanj.",
             "Za vse, kar potrebujemo, je ljubezen. Vse ostalo je odveč.",
@@ -36,8 +36,20 @@ def coinData():
             "Sreča ni cilj, temveč pot.",
             "Pomembno je, da si upamo. Da se postavimo, ko je treba."
             ]
+    rnd_quote=random.choice(quotes)
+    return {"quote":rnd_quote}
+
+
+@app.route("/randomŠt")
+def randomŠt():
+    return render_template("randomŠt.html")
+
+@app.route("/randomŠtData")
+def randomŠtData():
+    
 
     return 
+
 
 
 app.run(debug=True)
